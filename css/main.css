@@ -22,3 +22,26 @@
 	top: -80px;
 	border-bottom: solid 1px #e4e4e4;
 }
+
+/* bootstrap css overrides */
+
+.carousel .item {
+	background-color: #478bca;
+}
+
+.carousel-control.left, .carousel-control.right{
+	background-image: none;
+}
+
+.diamond {
+	width: 120px;
+	height: 120px;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	background: white;
+	vertical-align: middle;
+	margin: 0 auto;
+	box-shadow: 5px 5px 0px #478bca;
+	border: 1px solid #00B4E5;
+}
+
