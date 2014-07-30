@@ -29,7 +29,6 @@
     
     <!-- site styles -->
     <link href="css/main.css" rel="stylesheet">
-		
   </head>
 <!-- NAVBAR
 ================================================== -->
@@ -51,7 +50,9 @@
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#whoWeAre">Who We Are</a></li>
+                <li><a href="#whatWeDo">What We Do</a></li>
+                <li><a href="javascript:$('joinUs').scrollIntoView()">Join Us</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
@@ -83,11 +84,13 @@
 	          <a class="navbar-brand" href="#" style="padding:5px 10px;"><img src="images/BlueStarSoftware_Logo_CMYK.png" style="width:120px;"/></a>
 	        </div>
 	        <div class="navbar-collapse collapse">
-	          <ul class="nav navbar-nav">
-	            <li class="active"><a href="#">Home</a></li>
-	            <li><a href="#about">About</a></li>
-	            <li><a href="#contact">Contact</a></li>
-	            <li class="dropdown">
+	          <ul class="nav navbar-nav navbar-right">
+	            <li class="active"><a href="#home">Home</a></li>
+	            <li><a href="#whoWeAre">Who We Are</a></li>
+                <li><a href="#whatWeDo">What We Do</a></li>
+                <li><a href="#joinUs">Join Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+	            <!-- <li class="dropdown">
 	              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
 	              <ul class="dropdown-menu" role="menu">
 	                <li><a href="#">Action</a></li>
@@ -98,13 +101,13 @@
 	                <li><a href="#">Separated link</a></li>
 	                <li><a href="#">One more separated link</a></li>
 	              </ul>
-	            </li>
+	            </li> -->
 	          </ul>
-	          <ul class="nav navbar-nav navbar-right">
+	          <!-- <ul class="nav navbar-nav navbar-right">
 	            <li><a href="../navbar/">Default</a></li>
 	            <li><a href="../navbar-static-top/">Static top</a></li>
 	            <li class="active"><a href="./">Fixed top</a></li>
-	          </ul>
+	          </ul> -->
 	        </div><!--/.nav-collapse -->
 	      </div>
 	    </div>
@@ -153,6 +156,7 @@
 
     <!-- Carousel
     ================================================== -->
+    <a id="home"></a>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -209,6 +213,7 @@
 
 
       <!-- Three columns of text below the carousel -->
+      <a id="whoWeAre"></a>
       <div class="row">
         <div class="col-lg-4" style="padding:5px;">
           <div class="diamond"></div>
@@ -238,6 +243,7 @@
 
       <hr class="featurette-divider">
 
+	  <a id="whatWeDo"></a>
       <div class="row featurette">
       	<div class="prlx-1" data-stellar-background-ratio="0.5">
         <div class="col-md-7">
@@ -252,6 +258,7 @@
 
       <hr class="featurette-divider">
 
+	  <a id="joinUs"></a>
       <div class="row featurette">
         <div class="col-md-5">
           <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
@@ -264,6 +271,7 @@
 
       <hr class="featurette-divider">
 
+	  <a id="contact"></a>
       <div class="row featurette">
       	<div class="prlx-2" data-stellar-background-ratio="0.5">
         <div class="col-md-7">
@@ -352,6 +360,18 @@
 	    		    //nav.hide();
 	    		  }
 		    });
+		    
+		    // smooth anchor scrolling
+	    	$('a[href*=#]:not([href=#])').click(function() {
+	    		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	    	    	var target = $(this.hash);
+	    	      	target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	    	      	if (target.length) {
+	    	        	$('html,body').animate({scrollTop: target.offset().top - 50}, 1000);
+	    	        	return false;
+	    	      	}
+	    	    }
+    	  	});
 		});
 		
 	</script>
