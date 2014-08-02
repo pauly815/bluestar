@@ -33,6 +33,8 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,500' rel='stylesheet' type='text/css'>
     
+    <link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" rel="stylesheet" type='text/css' />
+    
   </head>
 <!-- NAVBAR
 ================================================== -->
@@ -50,7 +52,9 @@
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	          </button>
-	          <a class="navbar-brand" href="#" style="padding:5px 10px;"><img src="images/BlueStarSoftware_Logo_CMYK.png" style="width:120px;"/></a>
+	          <div class="navbar-brand" style="padding:5px 10px;">
+	          	<img id="companyLogo" src="images/BlueStarSoftware_Logo_CMYK.png"/>
+	          </div>
 	        </div>
 	        <div class="navbar-collapse collapse">
 	          <ul class="nav navbar-nav navbar-right">
@@ -89,16 +93,26 @@
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <div class="container marketing" style="width:100%;">
+    <div id="mainContainer" class="container marketing" style="width:100%;">
 
 <!-- <div data-stellar-ratio="2" class="img-circle apple" style="width:140px;height:140px;background:gray;position:absolute;"></div> -->
 
-		<!-- Carousel
+		<!-- Home
     	================================================== -->
     	<a id="home"></a>
     	<div class="row" style="margin-top:70px;">
       	<div class="prlx-1" data-stellar-background-ratio="0.5">
-      	<div style="color:white;font-size:40px;padding-top:35px;text-align:center;font-family:'Alegreya Sans SC', sans-serif;color:#80a7c9;">Welcome to the Blue Star Difference</div>
+      	<div style="padding:35px 0 0 15%;">
+      		<span id="welcomeText" style="font-size:3em;font-family:'Alegreya Sans SC', sans-serif;color:#EBEFF0;"></span>
+      	</div>
+      	<div id="welcomeText2" style="opacity:0;margin-top:50px;width:100%;color:#EBEFF0;font-size:3em;padding-top:35px;text-align:center;font-family:'Alegreya Sans SC', sans-serif;">
+      		<span style="padding:5px;">Different.</span>
+      		<span style="padding:5px;">Better.</span>
+      		<span style="padding:5px;">Blue Star.</span>
+      	</div>
+      	<div id="downArrow" style="text-align:center;margin:8% auto 0px;opacity:0;">
+      		<a href="#whatWeDo"><img src="images/arrow.png"/></a>
+      	</div>
         <!-- <div class="col-md-7">
           <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
@@ -194,7 +208,7 @@
           <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div> -->
-        <div style="color:black;font-size:30px;padding-top:150px;text-align:center;">JOIN US</div>
+        <div style="color:black;font-size:2em;padding-top:150px;text-align:center;">JOIN US</div>
       </div>
 
       <hr class="featurette-divider">
@@ -209,7 +223,7 @@
         <div class="col-md-5">
           <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
         </div> -->
-        <div style="color:white;font-size:30px;padding-top:150px;text-align:center;">CONTACT</div>
+        <div style="color:white;font-size:2em;padding-top:150px;text-align:center;">CONTACT</div>
         </div>
       </div>
 
@@ -231,10 +245,12 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/docs.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
     <script src="js/modernizr-latest.js"></script>
+    <script src="js/typed.js"></script>
     
     <script type="text/javascript">
     
@@ -274,11 +290,18 @@
 		    	 if (500 < $w.scrollTop() && !scrolled) {
 	    		    nav.addClass('fixed');
 	    		    nav.animate({top: 0});
+	    		    $('#companyLogo').css({"width":"120px","margin-top":"0"});
 	    		    scrolled = true;
 	    		  }
 
 		    	 else if (500 > $w.scrollTop() && scrolled) {
-	    		    nav.animate({top: -80}, {always: function(){nav.removeClass('fixed'); nav.removeAttr('style');}});
+	    		    nav.animate({top: -80}, 
+	    		    		    {always: function(){
+	    		    		    	nav.removeClass('fixed'); 
+	    		    		    	nav.removeAttr('style');
+	    		    		    	$('#companyLogo').css({"width":"170px","margin-top":"-10px"});
+	    		    		     }
+	    		     			});
 	    		    scrolled = false;
 	    		  }
 		    });
@@ -294,7 +317,56 @@
 	    	      	}
 	    	    }
     	  	});
+		    
+	    	
+	    	  $(function(){
+	    	      $('#welcomeText').typed({
+	    	        strings: ['Welcome to the Blue Star Difference','Intelligence Community Focused',
+	    	                  'Highly Skilled Technical Staff','Great Company Culture','Competitive Rates'],
+	    	        //strings:['Test'],
+	    	        typeSpeed: 30,
+	    	        backSpeed: -10,
+	    	        callback: function(){
+	    	        	setTimeout(function(){
+		    	        	$('#welcomeText').html('');
+		    	        	$('.typed-cursor').css({'display':'none'});
+		    	        	
+		    	        	 //var divWidth=$("#mainContainer").width() / 100 * 25;
+		    		    	  $('#welcomeText2').animate({opacity: 1},{queue:false,duration:800})
+		    		    	  					.animate({'margin':'5% auto 0','text-align':'center'}, {queue:false,duration:800,easing:'easeOutBounce'});
+		    		    	    
+		    		    	 $('#downArrow').animate({opacity:1});
+		    		    	  
+	    	        	}, 1000);
+	    	        }
+	    	      });
+	    	      
+    	       		/* $("#welcomeText2").typed({
+		    	        strings: ["Our commitment to the US Intelligence Community provides you with immediate reach-back to cleared IT professionals."],
+		    	        startDelay: 3000,
+		    	        typeSpeed: 30
+		    	    }); */
+		    	    
+		    	   
+	    	  });
+	    	
+		    /* var text = "Welcome to the Blue Star Difference";		    
+	    	 $.each(text.split(''), function(i, letter){
+
+	             //we add 100*i ms delay to each letter 
+	             setTimeout(function(){
+
+	                 //we add the letter to the container
+	                 $('#welcomeText').html($('#welcomeText').html() + letter);
+	             
+	             }, 100*i);
+	         }); */
+	         
+	         
+	    	  
 		});
+		
+		
 		
 	</script>
   </body>
