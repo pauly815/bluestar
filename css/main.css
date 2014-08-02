@@ -1,3 +1,50 @@
+/* @media(max-width: 1580px) {
+  body {
+    font-size: 18px;
+  }
+  .unbehaved-element {
+    font-size: 1.9em; Fine tune unbehaved elements
+  }
+}
+
+@media(max-width: 1200px) {
+  body {
+    font-size: 16px;
+  }
+} */
+
+#companyLogo {
+	width:170px;
+	margin-top:-10px;
+}
+
+@media(max-width: 1000px) {
+	body{
+		font-size:14px;
+	}
+}
+
+@media(max-width: 700px) {
+	body{
+		font-size:12px;
+	}
+	
+	#companyLogo {
+		width:150px;
+		margin-top:-5px;
+	}
+}
+
+@media(max-width: 500px) {
+	body{
+		font-size:10px;
+	}
+	#companyLogo {
+		width:120px;
+		margin-top:-5px;
+	}
+}
+
 .prlx-1{ 
 	background: url('../images/banner_test.jpg');
 	background-attachment: fixed;
@@ -21,6 +68,12 @@
 	position: fixed;
 	top: -80px;
 	border-bottom: solid 1px #AAAAAA !important;
+	opacity: 0.9;
+}
+
+.logoFixed {
+	width:170px;
+	margin-top:-10px;
 }
 
 /* bootstrap css overrides */
@@ -57,9 +110,54 @@
 .navbar {
 	background:#EBEFF0;
 	border:0;
+	border-radius:0 !important;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
   color: white;
   background: #488CCB;
+}
+
+/* typed.js - blinking cursor */
+
+.typed-cursor{
+	color:#EBEFF0;
+	font-size:3em;
+	opacity: 1;
+	font-weight: 100;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	-ms-animation: blink 0.7s infinite;
+	-o-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+
+@-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+
+@-webkit-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+
+@-moz-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+
+@-ms-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+
+@-o-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
 }
