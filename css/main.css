@@ -18,6 +18,23 @@
 	margin-top:-10px;
 }
 
+.prlx-1{ 
+	background-image: url('../images/stock-photo-19639427-typing_1500x999.jpg');
+	background-attachment: fixed;
+	background-position: 0 -450px;
+	background-repeat: no-repeat;
+	height: 500px;
+	position: relative;
+}
+.prlx-2{ 
+	background-image: url('../images/stock-photo-27555944-business-succeed_1500x1180_30x.jpg');
+	background-attachment: fixed;
+	background-position: 0 -450px;
+	background-repeat: no-repeat;
+	height: 500px;
+	position: relative;
+}
+
 @media(max-width: 1000px) {
 	body{
 		font-size:14px;
@@ -33,33 +50,27 @@
 		width:150px;
 		margin-top:-5px;
 	}
+	
+	.prlx-1{
+		background-image: url('../images/stock-photo-19639427-typing_750x499.jpg');
+		background-position: -200px -50px;
+	}
+	
+	.prlx-2{
+		background-image: url('../images/stock-photo-27555944-business-succeed_750x590_30x.jpg');
+		background-position: -235px -50px;
+	}
 }
 
 @media(max-width: 500px) {
 	body{
 		font-size:10px;
 	}
+	
 	#companyLogo {
 		width:120px;
 		margin-top:-5px;
 	}
-}
-
-.prlx-1{ 
-	background: url('../images/banner_test.jpg');
-	background-attachment: fixed;
-	background-position: 50% 0;
-	background-repeat: no-repeat;
-	height: 500px;
-	position: relative;
-}
-.prlx-2{ 
-	background: url('../images/banner2_test.jpg');
-	background-attachment: fixed;
-	background-position: 50% 0;
-	background-repeat: no-repeat;
-	height: 500px;
-	position: relative;
 }
 
 .fixed {
@@ -115,7 +126,7 @@
 
 .navbar-default .navbar-nav > li > a:hover {
   color: white;
-  background: #488CCB;
+  background: #112A46;
 }
 
 /* typed.js - blinking cursor */
