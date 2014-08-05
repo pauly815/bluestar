@@ -13,6 +13,22 @@
   }
 } */
 
+body{
+	overflow-x:hidden;	
+}
+
+div > table > tbody > tr > td{
+
+	border-top: 1px solid #E5C0B3;
+	padding: 10px;
+}
+
+div > table > tbody > tr > td:hover{
+	background-color:#E2D1CC;
+	transition: all 0.2s linear 0s;
+	padding-left:15px;
+}
+
 #companyLogo {
 	width:170px;
 	margin-top:-10px;
