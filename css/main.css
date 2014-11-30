@@ -117,6 +117,10 @@ div > table > tbody > tr > td:hover{
 	background-image: none;
 }
 
+.carousel-caption {
+	padding-bottom:8%;
+}
+
 .diamond {
 	width: 120px;
 	height: 120px;
