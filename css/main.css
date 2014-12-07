@@ -77,7 +77,7 @@ div > table > tbody > tr > td:hover{
 		margin-top:-5px;
 	}
 	
-	.prlx-1{
+	/* .prlx-1{
 		background-image: url('../images/stock-photo-19639427-typing_750x499.jpg');
 		background-position: -200px -50px;
 	}
@@ -85,7 +85,7 @@ div > table > tbody > tr > td:hover{
 	.prlx-2{
 		background-image: url('../images/stock-photo-27555944-business-succeed_750x590_30x.jpg');
 		background-position: -235px -50px;
-	}
+	} */
 }
 
 @media(max-width: 500px) {
