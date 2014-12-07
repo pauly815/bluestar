@@ -15,6 +15,7 @@
 
 body{
 	overflow-x:hidden;	
+	font-family:"Open Sans",Helvetica,Arial,sans-serif;
 }
 
 div > table > tbody > tr > td{
@@ -35,20 +36,21 @@ div > table > tbody > tr > td:hover{
 }
 
 .prlx-1{ 
-	background-image: url('../images/stock-photo-19639427-typing_1500x999.jpg');
-	background-attachment: fixed;
-	background-position: 0 -450px;
+	background-image: url('../images/stock-photo-40071082-java-source-code_1500x999_blue_overlay.png');
 	background-repeat: no-repeat;
-	height: 500px;
-	position: relative;
+	background-position: center center;
+	background-size: cover;
+	/*background-attachment: fixed; creates a sliver at the top of the page */
 }
 .prlx-2{ 
 	background-image: url('../images/stock-photo-27555944-business-succeed_1500x1180_30x.jpg');
-	background-attachment: fixed;
-	background-position: 0 -450px;
+	/* background-attachment: fixed; */
+	/* background-position: 0 -450px; */
 	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
 	height: 500px;
-	position: relative;
+	/* position: relative; */
 }
 
 @media(max-width: 1000px) {
@@ -96,6 +98,7 @@ div > table > tbody > tr > td:hover{
 	top: -80px;
 	border-bottom: solid 1px #AAAAAA !important;
 	opacity: 0.9;
+	background:#112A46 !important;
 }
 
 .logoFixed {
@@ -139,14 +142,27 @@ div > table > tbody > tr > td:hover{
 }
 
 .navbar {
-	background:#EBEFF0;
+	background:transparent;
 	border:0;
 	border-radius:0 !important;
+	color:white;
+}
+
+.navbar-default .navbar-nav > li > a {
+	font-size: .9em;
+	color:white;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
   color: white;
-  background: #112A46;
+  /* background: #112A46; */
+  border-bottom: 3px solid white;
+}
+
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  background-color: transparent;
+  color: white;
 }
 
 /* typed.js - blinking cursor */
