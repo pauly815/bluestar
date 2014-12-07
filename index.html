@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="shortcut icon" href="images/blue_diamond.ico" type="image/x-icon">
 
     <title>Blue Star Software</title>
 
@@ -29,10 +29,10 @@
     
     <!-- site styles -->
     <link href="css/main.css" rel="stylesheet">
-    
+    <!-- 
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,500' rel='stylesheet' type='text/css'>
-    
+     -->
     <link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" rel="stylesheet" type='text/css' />
     
   </head>
@@ -53,7 +53,7 @@
 	            <span class="icon-bar"></span>
 	          </button>
 	          <div class="navbar-brand" style="padding:5px 10px;">
-	          	<img id="companyLogo" src="images/BlueStarSoftware_Logo_CMYK.png"/>
+	          	<img id="companyLogo" src="images/BlueStarSoftware_Logo_Rev.png" style="display:none;"/>
 	          </div>
 	        </div>
 	        <div class="navbar-collapse collapse">
@@ -100,18 +100,25 @@
 		<!-- Home
     	================================================== -->
     	<a id="home"></a>
-    	<div class="row" style="margin-top:70px;">
-      	<div class="prlx-1" data-stellar-background-ratio="0.5">
-      	<div style="padding:35px 0 0 10%;">
+    	<div class="row">
+      	<div id="homeSection" class="prlx-1" data-stellar-background-ratio="0.5">
+      	<!-- <div style="padding:35px 0 0 10%;">
       		<span id="welcomeText" style="font-size:3em;font-family:'Alegreya Sans SC', sans-serif;color:#EBEFF0;text-shadow:0 1px 2px black;"></span>
+      	</div> -->
+      	<!-- div id="welcomeText2" style="opacity:0;margin-top:50px;width:100%;color:#EBEFF0;font-size:3em;padding-top:35px;text-align:center;font-family:'Alegreya Sans SC', sans-serif;text-shadow:0 1px 2px black;">
+      		<span style="padding:5px;">different.</span>
+      		<span style="padding:5px;">better.</span>
+      		<span style="padding:5px;">blue star.</span>
+      	</div -->
+      	
+      	<div id="welcomeText2" style="text-align:center;font-size:2em;width:100%;color:white;top:50%;">
+      		<img src="images/bstar_logo_d_in_cir3_100x100.png" style="padding-bottom:1em"/><br/>
+      		<span style="padding:5px;">different.</span>
+      		<span style="padding:5px;">better.</span>
+      		<span style="padding:5px;">blue star.</span>
       	</div>
-      	<div id="welcomeText2" style="opacity:0;margin-top:50px;width:100%;color:#EBEFF0;font-size:3em;padding-top:35px;text-align:center;font-family:'Alegreya Sans SC', sans-serif;text-shadow:0 1px 2px black;">
-      		<span style="padding:5px;">Different.</span>
-      		<span style="padding:5px;">Better.</span>
-      		<span style="padding:5px;">Blue Star.</span>
-      	</div>
-      	<div id="downArrow" style="text-align:center;margin:8% auto 0px;opacity:0;">
-      		<a href="#whatWeDo"><img src="images/arrow.png"/></a>
+      	<div id="downArrow" style="text-align:center;margin:12% auto 0px;">
+      		<a href="#whatWeDo"><img src="images/arrow_50x50.png"/></a>
       	</div>
         <!-- <div class="col-md-7">
           <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
@@ -311,7 +318,23 @@
     
     <script type="text/javascript">
     
+    //$('#homeSection').height( $(window).height() );
+	//$('#homeSection').css({"height":$(window).height()});
     
+	function resizeTopContent(){
+	    $('#homeSection').height( $(window).height() );
+	    
+	   // alert($(window).height())
+	}
+
+	$(document).ready(function() {
+	    resizeTopContent();
+	});
+
+	/* $(window).resize(function() {
+	    resizeTopContent();
+	}); */
+	
 		$(document).ready(function() {
 			
 			if (!Modernizr.touch) {
@@ -346,8 +369,9 @@
 		    	
 		    	 if (500 < $w.scrollTop() && !scrolled) {
 	    		    nav.addClass('fixed');
+	    		    nav.addClass('navbar-scrolled');
 	    		    nav.animate({top: 0});
-	    		    $('#companyLogo').css({"width":"120px","margin-top":"0"});
+	    		    $('#companyLogo').css({"width":"120px","margin-top":"-2px","display":"block"});
 	    		    scrolled = true;
 	    		  }
 
@@ -356,7 +380,7 @@
 	    		    		    {always: function(){
 	    		    		    	nav.removeClass('fixed'); 
 	    		    		    	nav.removeAttr('style');
-	    		    		    	$('#companyLogo').css({"width":"170px","margin-top":"-10px"});
+	    		    		    	$('#companyLogo').css({"display":"none"});
 	    		    		     }
 	    		     			});
 	    		    scrolled = false;
@@ -377,7 +401,7 @@
 		    
 	    	
 	    	  $(function(){
-	    	      $('#welcomeText').typed({
+	    	      /* $('#welcomeText').typed({
 	    	        strings: ['Welcome to the Blue Star Difference','Intelligence Community Focused',
 	    	                  'Highly Skilled Technical Staff','Great Company Culture','Competitive Rates'],
 	    	        //strings:['Test'],
@@ -397,7 +421,7 @@
 	    	        	}, 1000);
 	    	        }
 	    	      });
-	    	      
+	    	       */
     	       		/* $("#welcomeText2").typed({
 		    	        strings: ["Our commitment to the US Intelligence Community provides you with immediate reach-back to cleared IT professionals."],
 		    	        startDelay: 3000,
