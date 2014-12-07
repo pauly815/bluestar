@@ -30,6 +30,14 @@ div > table > tbody > tr > td:hover{
 	padding-left:15px;
 }
 
+.stars-in-circle {
+	background-image: url('../images/bstar_logo_d_in_cir3_100x100.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 100px;
+	margin: 0 auto;
+}
+
 #companyLogo {
 	width:170px;
 	margin-top:-10px;
