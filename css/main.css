@@ -18,20 +18,24 @@ body{
 	font-family:"Open Sans",Helvetica,Arial,sans-serif;
 }
 
-div > table > tbody > tr > td{
+ /* div > table > tbody > tr > td{
 
 	border-top: 1px solid #E5C0B3;
 	padding: 10px;
-}
+} */
 
-div > table > tbody > tr > td:hover{
+/*div > table > tbody > tr > td:hover{
 	background-color:#E2D1CC;
 	transition: all 0.2s linear 0s;
 	padding-left:15px;
-}
+} */
 
 a {
 	color:#478BCA;
+}
+
+h2, .h2{
+	font-size: 26px;
 }
 
 .stars-in-circle {
@@ -63,6 +67,70 @@ a {
 	background-size: cover;
 	height: 500px;
 	/* position: relative; */
+}
+
+.bg-diamonds{
+	background-image: url('../images/stock-illustration-27591554-abstract-vector-background-for-use-in-design.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.wwd-big-data{
+	background-image: url('../images/big_data_white_bg.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	height: 500px;
+}
+
+.wwd-cloud{
+	background-image: url('../images/cloud_dark_blue_bg2.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	height: 500px;
+}
+
+.wwd-cloud-blue{
+	background-image: url('../images/cloud_blue_gradient_bg.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	height: 500px;
+}
+
+.wwd-mobile{
+	background-image: url('../images/mobile_with_hands_600h.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	height: 500px;
+}
+
+.wwd-mobile-wood-table{
+	
+	background-image: url('../images/mobile_wood_bg_1000x500.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	height: 500px;
+}
+
+.wwd-cybersecurity{
+	background-image: url('../images/lock_white_bg.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	height: 500px;
+}
+
+.diamond-outlines{
+	background-image: url('../images/diamond_outlines_bg2.png');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: cover;
+	height: 500px;
 }
 
 @media(max-width: 1000px) {
@@ -110,7 +178,7 @@ a {
 	top: -80px;
 	border-bottom: solid 1px #AAAAAA !important;
 	opacity: 0.9;
-	background:#112A46 !important;
+	background:#1A3668 !important;
 }
 
 .logoFixed {
@@ -122,10 +190,17 @@ a {
 
 .carousel {
 	bottom: 0;
+	height: 450px;
 }
 
 .carousel .item {
-	background-color: #478bca;
+	/* background-color: #478bca; */
+	background-color: #191B1F;
+	height: 450px;
+	/* background-image: url('../images/stock-illustration-27591554-abstract-vector-background-for-use-in-design.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover; */
 }
 
 .carousel-control.left, .carousel-control.right{
@@ -133,7 +208,7 @@ a {
 }
 
 .carousel-caption {
-	padding-bottom:8%;
+	padding-bottom:8em;
 }
 
 .diamond {
