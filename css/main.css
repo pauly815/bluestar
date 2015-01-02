@@ -69,6 +69,14 @@ h2, .h2{
 	/* position: relative; */
 }
 
+.people-group{
+	background-image: url('../images/group_of_people_transparent_bluestar_700x180.png');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	height:180px;
+}
+
+
 .bg-diamonds{
 	background-image: url('../images/stock-illustration-27591554-abstract-vector-background-for-use-in-design.png');
 	background-repeat: no-repeat;
@@ -169,6 +177,11 @@ h2, .h2{
 		width:120px;
 		margin-top:-5px;
 	}
+	
+	.people-group{
+		background-image: url('../images/group_of_people_transparent_bluestar2.png');
+		height:90px;
+	}
 }
 
 .fixed {
@@ -206,6 +219,7 @@ h2, .h2{
 
 .carousel-control.left, .carousel-control.right{
 	background-image: none;
+	color:#5A5A5A;
 }
 
 .carousel-caption {
