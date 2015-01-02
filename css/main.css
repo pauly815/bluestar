@@ -195,7 +195,8 @@ h2, .h2{
 
 .carousel .item {
 	/* background-color: #478bca; */
-	background-color: #191B1F;
+	/* background-color: #191B1F; */
+	background-color: #EBEFF0;
 	height: 350px;
 	/* background-image: url('../images/stock-illustration-27591554-abstract-vector-background-for-use-in-design.png');
 	background-repeat: no-repeat;
@@ -208,7 +209,9 @@ h2, .h2{
 }
 
 .carousel-caption {
-	padding-bottom:7em;
+	color:black;
+	padding-bottom:4em;
+	text-shadow:none;
 }
 
 .diamond {
